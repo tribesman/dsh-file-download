@@ -1,0 +1,40 @@
+{
+	"name": "@dsh-plugins/file-download",
+	"version": "0.1.0",
+	"description": "DSH web plugin: a Download button on every delivered-file card, streaming the original bytes through an authenticated Host route",
+	"keywords": [
+		"dsh-plugin",
+		"deepseek-harness",
+		"deepseek",
+		"cordis",
+		"download",
+		"deliverables",
+		"web"
+	],
+	"license": "MIT",
+	"type": "module",
+	"main": "./lib/index.js",
+	"exports": {
+		".": "./lib/index.js",
+		"./client": "./lib/client.js",
+		"./package.json": "./package.json"
+	},
+	"files": [
+		"lib",
+		"README.md",
+		"LICENSE"
+	],
+	"scripts": {
+		"test": "node --test test/*.test.mjs",
+		"check": "node --check lib/index.js && node --check lib/client.js"
+	},
+	"engines": {
+		"node": ">=22"
+	},
+	"dsh": {
+		"client": {
+			"platform": "web",
+			"inject": []
+		}
+	}
+}
