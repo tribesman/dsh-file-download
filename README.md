@@ -61,14 +61,14 @@ profile bundle: it needs its own Loader row in the profile's patch layer
 Then add the package to the profile, in one of three ways:
 
 ```bash
-# 1. straight from a git remote (installs into the profile's node_modules)
-dsh plugin --profile web add "git+https://github.com/<you>/file-download.git"
+# 1. straight from the git remote (installs into the profile's node_modules)
+dsh plugin --profile web add "git+https://github.com/tribesman/dsh-file-download.git"
 
 # 2. from npm, once published
 dsh plugin --profile web add @dsh-plugins/file-download
 
 # 3. from a checkout, for development (symlink, no copy)
-ln -s /path/to/file-download \
+ln -s /path/to/dsh-file-download \
   "$DSH_HOME/profiles/web/node_modules/@dsh-plugins/file-download"
 ```
 
